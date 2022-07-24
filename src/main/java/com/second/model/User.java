@@ -4,19 +4,16 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(schema = "public")
-//@Table(name = "user", schema = "public")
+//@Table(schema = "public")
+@Table(name = "user", schema = "public")
 
 public class User {
     @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
-//    @SequenceGenerator(name = "user_seq", sequenceName = "user_username_seq")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private String username;
+
     private UUID id;
-
+    private String username;
     public User() {
     }
 
